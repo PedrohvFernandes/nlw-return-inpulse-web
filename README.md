@@ -16,8 +16,7 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
 
 
  ## Deploy
- - Deploy Web:
- - Deploy Mobile:
+ - Deploy Web: https://nlw-return-inpulse-web.vercel.app
 
 ## Tecnologias:
 
