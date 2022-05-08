@@ -14,9 +14,9 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
 - Demonstração Web: https://www.figma.com/proto/KpqZrTt8dBlk1k3osoFp2i/Feedback-Widget-(Community)?node-id=10%3A1722&scaling=min-zoom&page-id=10%3A1637&starting-point-node-id=10%3A1722
 - Demonstração Mobile: https://www.figma.com/proto/KpqZrTt8dBlk1k3osoFp2i/Feedback-Widget-(Community)?node-id=113%3A2743&scaling=scale-down&page-id=10%3A1638&starting-point-node-id=113%3A2743 
 
-
  ## Deploy
- - Deploy Web: https://nlw-return-inpulse-web.vercel.app
+ - Deploy Web(na vercel): https://nlw-return-inpulse-web.vercel.app
+ - Deploy do back-end(Railway): https://nlw-return-inpulse-web-production.up.railway.app
 
 ## Tecnologias:
 
@@ -39,7 +39,7 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
 - Axios(Biblioteca/API para lidar com req HTTP)
 
 ### Serviços usados:
-- mailtrap.io(Envio de email em ambiente de desenvolvimento) + nodemailer
+- mailtrap.io(Envio de email em ambiente de desenvolvimento e produção) + nodemailer
 
 ## 👨‍💻 Autor:
 - Linkedin: https://www.linkedin.com/in/pedro-henrique-vieira-fernandes
