@@ -65,7 +65,8 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
    - Historico de feedbacks
 - validação de campos/erros  
 
-## Executando o projeto local: Va na branch master e de um git clone: https://github.com/PedrohvFernandes/nlw-return-impulse-feedback-widget/tree/master
+## Executando o projeto local: 
+- Va na branch master e de um git clone: https://github.com/PedrohvFernandes/nlw-return-impulse-feedback-widget/tree/master
 Utilize o yarn ou o npm install para instalar as dependências do projeto. Em seguida, inicie o projeto utilizando terminal integrado para cada pasta, por exemplo: cd server e npm i para todos.
 ### Iniciar o Server
 - <pre> npm run dev / yarn dev </pre>
@@ -93,6 +94,9 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
  .env -> Usa essa chave em na branch de produçao e desenvolvimento prisma/schema.prisma/ env("DATABASE_URL")
  DATABASE_URL='file:./dev.db'
 </pre>
+
+## Executando o projeto produção: 
+- so dar um git clone https://github.com/PedrohvFernandes/nlw-return-impulse-feedback-widget/tree/producao e seguir os passos da pasta curiosidades/Em Produção 
 
 
 ## 👨‍💻 Autor:
