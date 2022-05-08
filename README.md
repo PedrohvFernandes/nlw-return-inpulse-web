@@ -85,12 +85,12 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
 
 ### Criar Variables de ambiente
 <pre>
- Web
+ Web -> Usa essa chave em na branch de produçao src/libs/api.ts
  .env.local:
  VITE_API_URL=http://localhost:3333
 
  Server
- .env
+ .env -> Usa essa chave em na branch de produçao e desenvolvimento prisma/schema.prisma/ env("DATABASE_URL")
  DATABASE_URL='file:./dev.db'
 </pre>
 
