@@ -65,16 +65,25 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
    - Historico de feedbacks
 - validação de campos/erros  
 
-## Executando o projeto
-Utilize o yarn ou o npm install para instalar as dependências do projeto. Em seguida, inicie o projeto utilizando terminal integrado para cada pasta.
-### Server
-<pre> npm run dev </pre>
+## Executando o projeto local: Va na branch master e de um git clone: https://github.com/PedrohvFernandes/nlw-return-impulse-feedback-widget/tree/master
+Utilize o yarn ou o npm install para instalar as dependências do projeto. Em seguida, inicie o projeto utilizando terminal integrado para cada pasta, por exemplo: cd server e npm i para todos.
+### Iniciar o Server
+- <pre> npm run dev / yarn dev </pre>
+- <pre> npm prisma studio / yarn prisma studio </pre>
+- Postgresql para SQLite
+  - Caso esteja postgresql mude o provider para ./prisma/schema.prisma para o sqlite
+  - npx prisma migrate dev > Refaça as migrações no banco de dados, pois elas salvão o tipo de banco de dados (sqlite, postgress,mongo, etc).
+  - não esqueça de verificar se ne ./prisma/schema.prisma/migrations/migration_lock.toml se o provider esta igual "sqlite"
+  - abra a interface do banco de dados npx prisma studio
 ### web
-<pre> npm run dev </pre>
-### expo go(no celular) mobile
-<pre> expo start </pre>
+- <pre> npm run dev /  yarn dev </pre>
 
-### Variables de ambiente
+### expo go(no celular) mobile
+- <pre> expo start </pre>
+- Mudar o baseURL no src/lib/api para seu 'http://ipv4:3333'
+- Acesse pelo aplicativo Expo Go
+
+### Criar Variables de ambiente
 <pre>
  Web
  .env.local:
@@ -82,7 +91,7 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
 
  Server
  .env
- DATABASE_URL=
+ DATABASE_URL='file:./dev.db'
 </pre>
 
 
