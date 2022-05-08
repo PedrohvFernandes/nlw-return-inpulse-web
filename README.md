@@ -84,6 +84,25 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
 - Mudar o baseURL no src/lib/api para seu 'http://ipv4:3333'
 - Acesse pelo aplicativo Expo Go
 
+
+## Para fazer o envio de email tanto local quanto para produção:
+- Crie uma conta no mailtrap com o email certo
+- Va na pasta server>src>adapters>nodemailer>nodemailer-mail-adapter.ts
+- <pre> cria a conta>paineltesting>inboxes>add inbox>name -> NLW Return>abre o inbox e pronto varios tipos de integraçao>nesse caso estamos usando o nodemailer></pre>
+
+<pre> e so copiar a config e coisar no server :) 
+ var transport = nodemailer.createTransport({
+   host: "smtp.mailtrap.io",
+   port: 2525,
+   auth: {
+     user: "SEU CODIGO",
+     pass: "SEU CODIGO"
+   }
+ });
+</pre>
+
+- Depois to: "Pedro Henrique Vieira Fernandes <pedrohv20fernandes@gmail.com>", -> mude esse email para o email cadastrado
+
 ### Criar Variables de ambiente
 <pre>
  Web -> Usa essa chave em na branch de produçao src/libs/api.ts
