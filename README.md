@@ -71,11 +71,22 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
 ### Iniciar o Server
 - <pre> npm run dev / yarn dev </pre>
 - <pre> npm prisma studio / yarn prisma studio </pre>
+- Se der erro ao iniciar o npm run dev, faça isso:
 - Postgresql para SQLite
   - Caso esteja postgresql mude o provider para ./prisma/schema.prisma para o sqlite
   - npx prisma migrate dev > Refaça as migrações no banco de dados, pois elas salvão o tipo de banco de dados (sqlite, postgress,mongo, etc).
   - não esqueça de verificar se ne ./prisma/schema.prisma/migrations/migration_lock.toml se o provider esta igual "sqlite"
+  - .env ->  DATABASE_URL='file:./dev.db'
+  - Se não der certo, apague os arquivos da pasta prisma e de um npx prisma migrate dev. Obs: ao apagar voce ira apagar todos os dados armazenados no banco de dados -> dev.db
   - abra a interface do banco de dados npx prisma studio
+
+- SQLite para Postgresql
+  - Caso esteja SQLite mude o provider para ./prisma/schema.prisma para o postgresql
+  - npx prisma migrate dev > Refaça as migrações no banco de dados, pois elas salvão o tipo de banco de dados (sqlite, postgress,mongo, etc).
+  - não esqueça de verificar se ne ./prisma/schema.prisma/migrations/migration_lock.toml se o provider esta igual "postgresql"
+  - .env ->   DATABASE_URL='postgresql://postgres:CHAVE_DO_SERVIÇO_QUE_VOCÊ_ESTA_USANDO@containers-us-west-45.railway.app:6258/railway'
+  - Se não der certo, apague os arquivos da pasta prisma e de um npx prisma migrate dev. Obs: ao apagar voce ira apagar todos os dados armazenados no banco de dados
+  - A interface do banco de dados fica a onde você esta usando o banco de dados, ou seja o serviço que você esta usando para usar o banco de dados em nuvem
 ### web
 - <pre> npm run dev /  yarn dev </pre>
 
@@ -106,12 +117,19 @@ Utilize o yarn ou o npm install para instalar as dependências do projeto. Em se
 ### Criar Variables de ambiente
 <pre>
  Web -> Usa essa chave em na branch de produçao src/libs/api.ts
+ caminho do env -> web/
  .env.local:
  VITE_API_URL=http://localhost:3333
 
  Server
+ caminho do env -> server/prisma/
  .env -> Usa essa chave em na branch de produçao e desenvolvimento prisma/schema.prisma/ env("DATABASE_URL")
+ 
+ sqlite:
  DATABASE_URL='file:./dev.db'
+
+ PostgreSQL:
+ DATABASE_URL='postgresql://postgres:CHAVE_DO_SERVIÇO_QUE_VOCÊ_ESTA_USANDO@containers-us-west-45.railway.app:6258/railway'
 </pre>
 
 ## Executando o projeto produção: 
