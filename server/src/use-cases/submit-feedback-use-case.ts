@@ -34,12 +34,13 @@ export class SubmitFeedbackUseCase {
     });
 
     await this.mailAdapter.sendMail({
-      subject: "Novo feedback :)",
+      subject: type === 'BUG' ? "Novo feedback de um bug :(" : "Nova feedback de ideia ou outro :)",
       body: [
-        `<div style='font-family: sans-serif; font-size: 16px; color:#111;'>`,
-        `<p>Tipo do feedback: ${type}</p>`,
-        `<p>Comentario: ${comment}</p>`,
-        screenshot ? `<img src="${screenshot}" />` : ``,
+        `<div style='font-family: sans-serif; font-size: 16px; color:#111; padding: 15px 20px'>`,
+          `<h1 style='border-bottom: 2px solid #000; width:50%'>Tipo do feedback: ${type}</h1>`,
+          `<p style='border-bottom: 2px solid #000; width:50%'>Comentário: ${comment}</p>`,
+          screenshot ? `<p>Seu print:</p>` : `<p>Você não enviou nem um print:</p>`,
+          screenshot ? `<img width='100%' src="${screenshot}" />` : `<img width='50%' src='https://memegenerator.net/img/instances/55928527.jpg'>`,
         `</div>`,
       ].join("\n"),
     });

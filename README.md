@@ -57,13 +57,13 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
 
 
 ## 🛠️ Futuras Features:
-- Theme Dark/Light theme (Tailwind Light/Dark mode)
+- Theme Dark/Light theme (Tailwind Light/Dark mode) ✔️
 - Em produção usar algum serviço de email (Mailgun)
 - Melhorar o HTML/CSS do e-mail
 - Dashboard de feedbacks enviados pelo usuario
    - Autenticação(Firebse/OAuth)
    - Historico de feedbacks
-- validação de campos/erros  
+- validação de campos/erros -> Mostrar no html o erro
 
 ## Executando o projeto local: 
 - Va na branch master e de um git clone: https://github.com/PedrohvFernandes/nlw-return-impulse-feedback-widget/tree/master
