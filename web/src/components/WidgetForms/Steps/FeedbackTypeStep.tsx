@@ -17,7 +17,7 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
           return (
             <button
               key={key}
-              className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none"
+              className="bg-zinc-100 dark:bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none"
               onClick={() => props.onFeedbackTypeChanged(key as FeedbackType)}
               type="button"
             >
