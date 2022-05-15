@@ -59,7 +59,7 @@ Construindo uma aplicação basica de feedbacks, a onde tera como pilares as seg
 ## 🛠️ Futuras Features:
 - Theme Dark/Light theme (Tailwind Light/Dark mode) ✔️
 - Em produção usar algum serviço de email (Mailgun)
-- Melhorar o HTML/CSS do e-mail
+- Melhorar o HTML/CSS do e-mail ✔️
 - Dashboard de feedbacks enviados pelo usuario
    - Autenticação(Firebse/OAuth)
    - Historico de feedbacks
